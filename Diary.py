@@ -5,3 +5,10 @@ def create_diary():
         print("Diary created!")
     except FileExistsError:
         print("Diary already exists!")
+
+def add_entry():
+    entry = input("Write your diary entry: ")
+    with open("Diary.txt", "a") as f:
+        f.write(entry + "\n")
+    print("Entry added!")
+
